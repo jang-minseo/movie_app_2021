@@ -73,5 +73,24 @@ import './App.css';
 
 - App.js, index.js ... 파일들을 리액트가 받아와서 해석하고 만든 결과물을 index.html에 끼워 넣는다.
 
+## 7. 리액트 기초 개념 : 컴포넌트
+
+- function으로 정의 내린곳을 컴포넌트라고 한다.
+
+```jsx
+function App() {
+	return (
+		<div>
+			<h1>Hello</h1>
+		</div>
+	);
+}
+```
+
+---
+
+## 8. 리액트 기초 개념 : JSX
+
+- 컴포넌트는 자바스크립트와 HTML을 조합한 JSX문법을 사용해서 만든다.
 
 
