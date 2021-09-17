@@ -3,15 +3,15 @@ function App() {
   return (
     <div className="App" >
       Hello React!!!!!!!!!!!
-      <Potato />
+      <Food />
     </div>
   );
 }
 
-function Potato() {
+function Food({name, picture}) {
   return (
       <div>
-          <h3>I Love Potato</h3>
+          <h3>I Love {name}</h3>
       </div>
   );
 }
