@@ -1,4 +1,47 @@
 # 장민서 201840130
+[ 09월 29일 ]
+
+## 1. Git 브랜치 관련 설정
+
+---
+
+```markdown
+git version // 2.28.0이상인지 확인
+git config —global init.dfaulBranch main
+```
+
+```markdown
+git config --list
+```
+
+```markdown
+git branch -m 이전이름 바꿀이름
+```
+
+---
+
+# 2. Prop-types
+
+```markdown
+> npm install prop-types 설치하기
+```
+
+- Package.json 파일을 열어 dependencies 키에 Prop-types가 등록되어 있으면 설치가 정상적으로 된 것이다.
+- Prop-types는 컴포넌트가 전달받은 props가 원하는 값인지 확인해 주는 역할을 한다.
+- 적용하는 법은 import PropTypes from 'prop-types'; 를 App.js 파일 맨 위에 추가한다.
+
+---
+
+# 3. State
+
+---
+
+- props는 정적인 데이터만 다룰 수 있다.
+- state는 동적인 데이터를 다루기 위해 사용된다.
+- state는 class형 컴포넌트에서 사용된다.
+- state는 객체형태의 데이터이다.
+- state를 사용하려면 반드시 class형 컴포넌트 안에서, 소문자를 사용하여 state라고 적는다.
+
 [ 09월 15일 ]
 
 ## 1. 세 번째 리엑트 기초 개념 : props
