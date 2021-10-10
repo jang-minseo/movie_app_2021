@@ -1,9 +1,9 @@
 # 장민서 201840130
 [ 10월 06일 ]
 
-## 1. 영화 API사용해 보기
+# 1. 영화 API사용해 보기
 
-# axios 설치하기
+## axios 설치하기
 
 ```markdown
 npm install axios
@@ -12,35 +12,33 @@ npm install axios
 - javascript에서는 영화 데이터를 로딩 할 때 fetch()함수를 사용한다.
 - 하지만 이시간은 javascript시간이 아님으로 axios를 사용한다.
 
-# YTS영화 데이터 API살펴보기
+## YTS영화 데이터 API살펴보기
 
 - 브라우저 주소창에 yts.lt/api라고 입력하고, YTS영화 데이터 API 사이트에 접속
 - 우리가 사용하는 API는 'List Movies API' 이다.
 - API는 특정 주소를 입력하면 그 주소에 맞는 결과를 보내 준다.
 
-# 영화 목록 데이터 확인하기
+## 영화 목록 데이터 확인하기
 
 ```markdown
 https://yts.mx/api/v2/list_movies.json
 ```
 
-# JSON Viewer 확장 도구 설치
+## JSON Viewer 확장 도구 설치
 
-# 영화 데이터 화면에 그리기
+## 콘솔에 영화 데이터 출력해보기
 
-# 콘솔에 영화 데이터 출력해보기
-
-```markdown
+```jsx
 getMovies = async () =>	{
 	const movies = await axios.get('https://yts.mx/api/v2/list_movies.json')
 	console.log(movies);
 }
 ```
 
-# movies state에 영화 데이터 저장하기
+## movies state에 영화 데이터 저장하기
 - this.set({movies:movies})와 같이 작성해서 movies state에 데이터를 저장한다.
 
-```markdown
+```jsx
 getMovies = async () =>	{
 	const {
 	data: {
@@ -51,9 +49,9 @@ getMovies = async () =>	{
 }
 ```
 
-# isLoaing state를 true에서 false로 업데이트 하기
+## isLoaing state를 true에서 false로 업데이트 하기
 
-```markdown
+```jsx
 getMovies = async () =>	{
 	const {
 	data: {
