@@ -1,6 +1,46 @@
 # 장민서 201840130
 # [ 10월 13일 ]
 
+## Movie.propTypes작성
+- id의 자료형은 Number이고, 반드시 있어야 한다. ProType.number.isRequired로 작성한다.
+```jsx
+Movie.propTypes = {
+	id: PropTypes.number.isRequired,
+	year: PropTypes.number.isRequired,
+	title: PropTypes.number.isRequired,
+	summary: PropTypes.number.isRequired,
+	poster: PropTypes.number.isRequired
+};
+```
+
+## API 정렬 기능
+```jsx
+ getMovies = async () =>	{
+	const {
+	data: {
+		data: {movies}
+	}
+	} = await axios.get('https://yts.mx/api/v2/list_movies.json?sort_by=rating');
+} // 평점을 기준으로 내림차순으로 영화데이터 정렬해서 출력
+```
+
+## Movie 컴포넌트를 반환하도록 movies.map() 수정
+```markdown
+import Movie from './Movie'
+App.js에 Movie 컴포넌트를 import한 다음, movies.map()에 전달한 함수가 <Movie />를 반환
+```
+
+## Movie컴포넌트에 props 전달
+- id, year, title, summary, poster를 isRequired로 설정해서 props를 모두 전달 해야한다.
+```jsx
+<Movie
+	id={movie.id}
+	year={movie.year}
+	title={movie.title}
+	summary={movie.summary}
+	poster={movie.medium_cover_image}
+/>
+```
 
 # [ 10월 06일 ]
 
