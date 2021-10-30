@@ -1,4 +1,86 @@
 # 장민서 201840130
+
+# [ 10월 27일 ]
+
+## li tag에 key props 추가
+- map()함수에는 2번째 매개변수를 지정할 경우 배열의 index값을 반환해 주는 기능이 있다.
+```jsx
+genres.map((gnere, index) => { ... })
+
+----> <ul className="movie__genres">
+	{genres.map((genre, index) => {
+	return (
+	<li key={index} className="movie__genre">
+	{genre}
+	</li>
+	);
+	})}
+	</ul>
+```
+
+## APP.css 수정
+
+## 시놉시스 180자로 제한
+- 자바스크립트의 slice함수를 이용하여 구현한다.
+```markdown
+"hereisstring".slice(0, 10) // h부터 0 1 2 ... g가 11    slice(시작, 끝)
+```
+```jsx
+<p className="movie__summary">{summary.slice(0, 180)} ... </p>
+```
+
+## react-router-dom 설치 및 프로젝트 폴더 정리
+```markdown
+>npm install react-router-dom
+```
+- src/routes 폴더 만들고 Home.js와 About.js 파일 생성
+- App.js내용을 Home.js로 복사하고 컴포넌트이름을 Home으로 수정
+- Home.css를 생성하고 Home.js에 import
+
+## 라우터 만들어 보기
+- 라우터는 사용자가 입력한 URL을 통해 특정 컴포넌트를 불러준다.
+- HashRouter와 Route컴포넌트 사용
+```jsx
+import About from './routes/About'
+
+function APP() {
+return (
+   <HashRouter>
+     <Router PATH='/about' component={About} />
+   </HashRouter>
+)
+}
+```
+## App.js 수정
+```jsx
+import About from './routes/About'
+import About from './routes/Home'
+
+function APP() {
+return (
+   <HashRouter>
+   <Router path= '/' exact={true} component={Home} />
+   <Router path='/about' component={About} />
+   </HashRouter>
+)
+}
+```
+- localhost:3000에 접속하면 주소 뒤에 자동으로 /#/이 붙으면서 영화 앱 화면이 나타난다.
+
+## 네비게이션 만들기
+```jsx
+import { Link } from 'react-router-dom'
+
+function Navigation() {
+	return (
+	<div>
+	<Link ='/'>Home</Link>
+	<Link ='/about'>About</Link>
+	<div>
+)
+}
+```
+
 # [ 10월 13일 ]
 
 ## Movie.propTypes작성
