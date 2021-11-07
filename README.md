@@ -1,5 +1,67 @@
 # 장민서 201840130
 
+# [ 11월 03일 ]
+
+## 영화 상세 정보 기능 만들어 보기
+- route props를 이용해 영화 카드를 누르면 상세 정보를 보여주는 기능을 만들어 본다.
+- route props는 라우팅 대상이 되는 컴포넌트에 넘겨주는 기본 props를 말한다.
+```jsx
+function Navigaion() {
+  return (
+    <div className="nav">
+      ...
+      <Route path="/movie-detail" component={Detail} />;
+    </div>
+  );
+}
+
+export default Navigation;
+```
+- pathname은 URL을 의미하며, state는 우리가 route props에 보내줄 데이터를 의미한다.
+
+## 네비게이션 컴포넌트 정리
+
+## Detail 컴포넌트 만들기
+```jsx
+class Detail extends React.Component {
+  componentDidMount() {
+    const { history, location } = this.props;
+    if (location.state === undefined) {
+      history.push('/');
+    }
+  }
+
+  render() {
+    const {
+      location: { state },
+    } = this.props;
+    if (state) {
+      const { year, title, summary, poster, genres } = state;
+      return (
+        <div>
+          <h1>{title}</h1>
+          <p>{year}</p>
+          <p>{summary}</p>
+          <p>{genres}</p>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  }
+}
+```
+
+## Movie 컴포넌트에 Link 컴포넌트 추가하기
+
+## Route 컴포넌트 추가하기
+
+## package.json과 package-lock.json의 차이
+- package.json은 의존성 관리 파일이다.
+
+
+
+
 # [ 10월 27일 ]
 
 ## li tag에 key props 추가
