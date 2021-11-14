@@ -11,8 +11,11 @@
     "predeploy": "npm run build"
 }
 ```
+
 ```markdown npm install gh-pages```을 사용하여 gh-pages 설치하기
+
 ```markdown git remote -v```을 사용하여 깃허브 주소 확인하기
+
 ```markdown npm run deploy```을 사용하여 배포하기
 
 ## package.json과 package-lock.json 차이
