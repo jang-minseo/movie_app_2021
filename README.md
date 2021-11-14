@@ -1,4 +1,25 @@
 # 장민서 201840130
+# [ 11월 10일 ]
+
+## movie app 배포하기
+- script에 depoly와 predeploy 추가
+```jsx
+"script": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
+}
+```
+```markdown npm install gh-pages```을 사용하여 gh-pages 설치하기
+```markdown git remote -v```을 사용하여 깃허브 주소 확인하기
+```markdown npm run deploy```을 사용하여 배포하기
+
+## package.json과 package-lock.json 차이
+- package.json은 패키지 의존성 관리 파일
+- 협업 등 팀원들 각자의 컴퓨터에 같은 패키지를 설치하여 동일한 개발환경을 구성해야 할때 package.json 사용
+- package.json의 경우는 version range를 사용 ex) "express": "~4.16.1"
+
 
 # [ 11월 03일 ]
 
